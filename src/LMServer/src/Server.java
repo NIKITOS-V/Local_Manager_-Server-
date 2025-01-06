@@ -9,11 +9,15 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Server implements CCDController {
     private static Integer LAST_USER_ID = 0;
+    private static final String SERVER_NAME = "SERVER";
+
     private final List<ClientConnectDriver> clientConnectDriverList;
 
     private final List<MessageData> messageDataList;
@@ -40,6 +44,9 @@ public class Server implements CCDController {
     private void startListeningThread(){
         new Thread(() ->{
             while (!this.serverSocket.isClosed()){
+                String requestType;
+                String userName;
+
                 try {
                     Socket socket = serverSocket.accept();
 
@@ -50,10 +57,19 @@ public class Server implements CCDController {
                             )
                     );
 
-                    String requestType = bufferedReader.readLine();
+                    requestType = bufferedReader.readLine();
 
                     if (requestType.equals(String.valueOf(ClientRequestType.connect))){
-                        addClient(bufferedReader.readLine(), socket);
+                        userName = bufferedReader.readLine();
+
+                        addClient(userName, socket);
+
+                        sendServerMessageToClient(
+                                String.format(
+                                        "Пользователь %s подключился к чату",
+                                        userName
+                                )
+                        );
                     }
 
                 } catch (IOException e) {
@@ -99,6 +115,13 @@ public class Server implements CCDController {
             this.clientConnectDriverList.remove(clientConnectDriver);
         }
 
+        sendServerMessageToClient(
+                String.format(
+                        "Пользователь %s покинул чат",
+                        clientConnectDriver.getUserName()
+                )
+        );
+
         System.out.println(this.clientConnectDriverList);
     }
 
@@ -116,6 +139,14 @@ public class Server implements CCDController {
             }
         }
 
+    }
+
+    private void sendServerMessageToClient(String message){
+        sendMessageToClients(
+                -1,
+                SERVER_NAME,
+                Collections.singletonList(message)
+        );
     }
 
 

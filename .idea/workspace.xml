@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="369d7e19-66b1-4793-822a-385a15b49ede" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/src/LMServer/.idea/artifacts/Server.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LMServer/src/Interfaces/Recipient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Resources/Server.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Widgets.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LMServer/.idea/git_toolbox_prj.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen/MSBinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainScreen/MainScreen.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserListScreen/ULSBinder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UserListScreen/UserListScreen.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EntryPoint.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LMServer/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ServerWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/ServerWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LMServer/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LMServer/src/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Resources/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Resources/Server.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,12 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.externalTools&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programs\Python_java\Local_Messenger\LMServer" />
+      <recent name="D:\Programs\Python_java\Local_Messenger\LMServer\src\MainScreen" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="LMServer" />
