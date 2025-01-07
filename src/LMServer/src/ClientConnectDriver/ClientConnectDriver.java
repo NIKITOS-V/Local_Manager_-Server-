@@ -16,7 +16,7 @@ import java.util.Objects;
 public class ClientConnectDriver implements Runnable, RecipientClientRequests {
     private final FunctionsController functionsController;
 
-    private final Integer userID;
+    private final int userID;
     private final String userName;
 
     private final CCDController server;
@@ -54,7 +54,7 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
         return userName;
     }
 
-    public Integer getUserID() {
+    public int getUserID() {
         return userID;
     }
 
@@ -136,12 +136,14 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
     public void closeConnection(){
         System.out.println("close con start");
 
-        this.server.delClientFromList(this);
-
         try {
-            this.socket.close();
-            this.bufferedWriter.close();
-            this.bufferedReader.close();
+            if (!this.socket.isClosed()){
+                this.server.delClientFromList(this);
+
+                this.socket.close();
+                this.bufferedWriter.close();
+                this.bufferedReader.close();
+            }
 
         } catch (IOException e) {
             System.out.println("close con fail");
@@ -159,7 +161,7 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
 
         ClientConnectDriver clientConnectDriver = (ClientConnectDriver) obj;
 
-        return this.userID.equals(clientConnectDriver.getUserID());
+        return this.userID == clientConnectDriver.getUserID();
     }
 
     @Override

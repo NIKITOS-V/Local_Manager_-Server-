@@ -1,0 +1,77 @@
+#:set control_server_panel_size_hint_y 0.05
+#:set server_data_panel_size_hint_y control_server_panel_size_hint_y
+#:set messages_panel_size_hint_y  1 - control_server_panel_size_hint_y - server_data_panel_size_hint_y
+
+#:set little_panel_text_size_hint 0.5
+
+<MainScreen>:
+    canvas:
+        Color:
+            rgba: self.bg_color
+
+        Rectangle:
+            size: self.size
+
+    BoxLayout:
+        id: main_layout
+        padding: 5
+        spacing: 5
+        orientation: "vertical"
+
+        BoxLayout:
+            orientation: "horizontal"
+            size_hint: 1, server_data_panel_size_hint_y
+
+            Label:
+                text: "Порт"
+                font_size: self.height * little_panel_text_size_hint
+                color: root.text_color
+
+            TextInput:
+                id: port_input
+                font_size: self.height * little_panel_text_size_hint
+                multiline: False
+                background_active: ""
+                background_normal: ""
+                background_color: root.text_input_bg_color
+                foreground_color: root.text_color
+
+            Widget:
+                size_hint: 3, 1
+
+        MessagesPanel:
+            id: messages_panel
+            size_hint: 1, messages_panel_size_hint_y
+            font_size: self.height * 0.025
+            multiline: True
+            readonly: True
+            background_active: ""
+            background_normal: ""
+            background_color: self.bg_color
+            foreground_color: self.fg_color
+            size_hint: 1, messages_panel_size_hint_y
+
+        BoxLayout:
+            spacing: main_layout.spacing
+            orientation: "horizontal"
+            size_hint: 1, control_server_panel_size_hint_y
+
+            Button:
+                text: "Остановить сервер"
+                foreground_color: root.text_color
+                background_active: ""
+                background_normal: ""
+                font_size: self.height * little_panel_text_size_hint
+                background_color: root.button_active_color if self.state == "active" else root.button_normal_color
+                on_press: root.stop_server(port_input)
+
+            Widget:
+
+            Button:
+                text: "Запустить север"
+                foreground_color: root.text_color
+                background_active: ""
+                background_normal: ""
+                font_size: self.height * little_panel_text_size_hint
+                background_color: root.button_active_color if self.state == "active" else root.button_normal_color
+                on_press: root.start_server(port_input)

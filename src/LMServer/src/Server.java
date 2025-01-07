@@ -1,4 +1,6 @@
+import Interfaces.BaseServer;
 import Interfaces.CCDController;
+import Interfaces.RecipientMessages;
 import RequestTypes.ClientRequestType;
 import Formating.MessageData;
 import ClientConnectDriver.ClientConnectDriver;
@@ -9,36 +11,45 @@ import java.io.InputStreamReader;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class Server implements CCDController {
-    private static Integer LAST_USER_ID = 0;
+public class Server implements CCDController, BaseServer {
+    private static int LAST_USER_ID = 0;
     private static final String SERVER_NAME = "SERVER";
+    private static final int SERVER_ID = -1;
 
     private final List<ClientConnectDriver> clientConnectDriverList;
-
     private final List<MessageData> messageDataList;
 
     private ServerSocket serverSocket;
+
+    private RecipientMessages msBinder;
 
     public Server(){
         this.clientConnectDriverList = new LinkedList<>();
         this.messageDataList = new LinkedList<>();
     }
 
-    public void startServer(){
+    @Override
+    public boolean startServer(int port){
         try {
-            this.serverSocket = new ServerSocket(5050);
+            if (this.serverSocket == null || this.serverSocket.isClosed()){
+                this.serverSocket = new ServerSocket(port);
 
-            startListeningThread();
+                startListeningThread();
 
+                sendServerMessageToGUI("Сервер запущен");
+            }
         } catch (IOException e){
             e.printStackTrace();
             stopServer();
+
+            return false;
         }
+
+        return true;
     }
 
     private void startListeningThread(){
@@ -95,41 +106,70 @@ public class Server implements CCDController {
         System.out.println(this.clientConnectDriverList);
     }
 
-    public void stopServer(){
+    @Override
+    public boolean stopServer(){
         System.out.println("stop server");
 
         try {
-            if (this.serverSocket != null) {
+            if (this.serverSocket != null && !this.serverSocket.isClosed()) {
+                for (ClientConnectDriver clientConnectDriver: this.clientConnectDriverList){
+                    clientConnectDriver.closeConnection();
+                }
+
+                this.clientConnectDriverList.clear();
 
                 serverSocket.close();
+
+                sendServerMessageToGUI("Сервер остановлен");
             }
 
         } catch (IOException e) {
             e.printStackTrace();
+
+            return false;
         }
+
+        return true;
+    }
+
+    @Override
+    public void setMSBinder(RecipientMessages msBinder) {
+        this.msBinder = msBinder;
     }
 
     @Override
     public void delClientFromList(ClientConnectDriver clientConnectDriver) {
         synchronized (this.clientConnectDriverList){
             this.clientConnectDriverList.remove(clientConnectDriver);
-        }
 
-        sendServerMessageToClient(
+            sendServerMessageToClient(
                 String.format(
                         "Пользователь %s покинул чат",
                         clientConnectDriver.getUserName()
                 )
-        );
+            );
+        }
 
         System.out.println(this.clientConnectDriverList);
     }
 
     @Override
-    public void sendMessageToClients(Integer userID, String userName, List<String> linesFromMessage) {
+    public void sendMessageToClients(int userID, String userName, List<String> linesFromMessage) {
         synchronized (this.messageDataList){
             this.messageDataList.add(
                 new MessageData(userID, userName, linesFromMessage)
+            );
+
+            StringBuilder message = new StringBuilder();
+
+            for (String line: linesFromMessage){
+                message.append(line).append("\n");
+            }
+
+            this.msBinder.accept_message(
+                    userID,
+                    userName,
+                    message.toString()
             );
         }
 
@@ -138,7 +178,14 @@ public class Server implements CCDController {
                 clientConnectDriver.sendMessageToClient(userName, linesFromMessage);
             }
         }
+    }
 
+    private void sendServerMessageToGUI(String message){
+        this.msBinder.accept_message(
+                SERVER_ID,
+                SERVER_NAME,
+                message + "\n"
+        );
     }
 
     private void sendServerMessageToClient(String message){

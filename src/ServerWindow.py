@@ -1,18 +1,28 @@
-from kivy.app import App
-from kivy.uix.boxlayout import BoxLayout
+from typing import Final
 
-from src.Widgets import TextPanel
+from jpype import JClass
+from kivy.app import App
+
+from src.ScreenController import ScreenController
+from src.ARLayout import ARLayout
 
 
 class ServerWindow(App):
-    def __init__(self, **kwargs):
+    def __init__(self, java_connect_driver: JClass, **kwargs):
         super().__init__(**kwargs)
 
+        self.__java_connect_driver: Final[JClass] = java_connect_driver
+
     def build(self):
-        boxLayout = BoxLayout()
+        screenController: ScreenController = ScreenController(
+            self.__java_connect_driver
+        )
+        screenController.open_main_screen()
 
-        boxLayout.add_widget(TextPanel())
+        arLayout: ARLayout = ARLayout()
+        arLayout.add_widget(screenController)
 
-        return boxLayout
+        return arLayout
 
-
+    def on_stop(self):
+        self.__java_connect_driver.stopServer()

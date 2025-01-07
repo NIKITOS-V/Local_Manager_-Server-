@@ -9,20 +9,316 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="Относительно готово, на данный момент работает. Остался визуал и логирование.">
-      <change afterPath="$PROJECT_DIR$/../../.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MainScreen/MSBinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../MainScreen/MainScreen.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ScreenController.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserListScreen/ULSBinder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../UserListScreen/UserListScreen.py" afterDir="false" />
+    <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="Начало работы над визуалом">
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/COPYRIGHT" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/README.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/THIRDPARTYLICENSEREADME-JAVAFX.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/THIRDPARTYLICENSEREADME.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/Welcome.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/JAWTAccessBridge-64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/JavaAccessBridge-64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/WindowsAccessBridge-64.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-console-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-console-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-datetime-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-debug-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-errorhandling-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-fibers-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-file-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-file-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-file-l2-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-handle-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-heap-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-interlocked-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-libraryloader-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-localization-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-memory-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-namedpipe-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-processenvironment-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-processthreads-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-processthreads-l1-1-1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-profile-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-rtlsupport-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-string-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-synch-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-synch-l1-2-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-sysinfo-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-timezone-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-core-util-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-conio-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-convert-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-environment-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-filesystem-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-heap-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-locale-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-math-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-multibyte-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-private-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-process-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-runtime-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-stdio-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-string-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-time-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/api-ms-win-crt-utility-l1-1-0.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/awt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/bci.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/dcpr.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/decora_sse.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/deploy.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/dt_shmem.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/dt_socket.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/dtplugin/deployJava1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/dtplugin/npdeployJava1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/eula.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/fontmanager.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/fxplugins.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/glass.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/glib-lite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/gstreamer-lite.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/hprof.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/instrument.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/j2gss.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/j2pcsc.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/j2pkcs11.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jaas_nt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jabswitch.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/java-rmi.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/java.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/java.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/java_crw_demo.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javacpl.cpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javacpl.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javafx_font.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javafx_iio.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javaw.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/javaws.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jawt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jdwp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jfr.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jfxmedia.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jfxwebkit.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jjs.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jli.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jp2iexp.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jp2launcher.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jp2native.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jp2ssv.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jpeg.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jsdt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jsound.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/jsoundds.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/keytool.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/kinit.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/klist.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/ktab.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/lcms.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/management.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/mlib_image.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/msvcp140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/msvcp140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/msvcp140_2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/net.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/nio.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/npt.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/orbd.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/pack200.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/plugin2/msvcp140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/plugin2/npjp2.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/plugin2/vcruntime140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/plugin2/vcruntime140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/policytool.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/prism_common.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/prism_d3d.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/prism_sw.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/resource.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/rmid.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/rmiregistry.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/server/Xusage.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/server/classes.jsa" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/server/jvm.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/servertool.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/splashscreen.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/sspi_bridge.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/ssv.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/ssvagent.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/sunec.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/sunmscapi.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/t2k.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/tnameserv.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/ucrtbase.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/unpack.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/unpack200.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/vcruntime140.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/vcruntime140_1.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/verify.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/w2k_lsa_auth.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/wsdetect.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/bin/zip.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/directshow.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/glib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/gstreamer.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/icu_web.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/jpeg_fx.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/libffi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/libxml2.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/libxslt.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/public_suffix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/javafx/webkit.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/asm.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/bcel.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/cldr.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/colorimaging.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/cryptix.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/dom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/dynalink.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/ecc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/freebxml.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/giflib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/icu.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/jcup.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/joni.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/jopt-simple.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/jpeg.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/lcms.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/libpng.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/mesa3d.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/pkcs11cryptotoken.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/pkcs11wrapper.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/relaxngcc.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/relaxngdatatype.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/relaxngom.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/santuario.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/siphash.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/thaidict.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/unicode.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/xalan.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/xerces.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/xmlresolver.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/legal/jdk/zlib.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/accessibility.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/amd64/jvm.cfg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/calendars.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/charsets.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/classlist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/cmm/CIEXYZ.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/cmm/GRAY.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/cmm/LINEAR_RGB.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/cmm/PYCC.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/cmm/sRGB.pf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/content-types.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/currency.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/ffjcext.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_de.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_es.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_it.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_ja.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_ko.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_pt_BR.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_sv.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_zh_CN.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_zh_HK.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/messages_zh_TW.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/splash.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/splash@2x.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/splash_11-lic.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/deploy/splash_11@2x-lic.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/access-bridge-64.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/cldrdata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/dnsns.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/jaccess.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/jfxrt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/localedata.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/meta-index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/nashorn.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/sunec.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/sunjce_provider.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/sunmscapi.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/sunpkcs11.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/ext/zipfs.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/flavormap.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fontconfig.bfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fontconfig.properties.src" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaBrightDemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaBrightDemiItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaBrightItalic.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaBrightRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaSansDemiBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaSansRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaTypewriterBold.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/fonts/LucidaTypewriterRegular.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/hijrah-config-umalqura.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/cursors.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/invalid32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_CopyDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_CopyNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_LinkDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_LinkNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_MoveDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/images/cursors/win32_MoveNoDrop32x32.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/javafx.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/javaws.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jce.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jfr.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jfr/default.jfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jfr/profile.jfc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jfxswt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jsse.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/jvm.hprof.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/logging.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/management-agent.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/management/jmxremote.access" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/management/jmxremote.password.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/management/management.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/management/snmp.acl.template" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/meta-index" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/net.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/plugin.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/psfont.properties.ja" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/psfontj2d.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/resources.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/rt.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/blacklist" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/blacklisted.certs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/cacerts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/java.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/java.security" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/javaws.policy" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/policy/limited/US_export_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/policy/limited/local_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/policy/unlimited/US_export_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/policy/unlimited/local_policy.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/public_suffix_list.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/sound.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/tzdb.dat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/tzmappings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/release" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ARLayout.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Formating/Errors.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Formating/Objectless.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Formating/Palette.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Interfaces/RecipientMessages.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/BaseServer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Interfaces/RecipientMessages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../MainScreen/CommonSettings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../Resources/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/Server.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/CCDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/CCDController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Resources/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/Server.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Widgets.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainScreen/MSBinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MainScreen/MSBinder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MainScreen/MainScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MainScreen/MainScreen.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ScreenController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ScreenController.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ServerWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerWindow.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserListScreen/ULSBinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/MainScreenView.kv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UserListScreen/UserListScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/jre1.8.0_431/lib/security/trusted.libraries" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,20 +370,6 @@
       <recent name="D:\Programs\Python_java\Local_Messenger\LMServer\src\LMServer\src\main" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
-      <module name="LMServer" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -105,12 +387,21 @@
       <option name="project" value="LOCAL" />
       <updated>1736106502862</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Начало работы над визуалом">
+      <option name="closed" value="true" />
+      <created>1736175876983</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1736175876983</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Относительно готово, на данный момент работает. Остался визуал и логирование." />
-    <option name="LAST_COMMIT_MESSAGE" value="Относительно готово, на данный момент работает. Остался визуал и логирование." />
+    <MESSAGE value="Начало работы над визуалом" />
+    <option name="LAST_COMMIT_MESSAGE" value="Начало работы над визуалом" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
