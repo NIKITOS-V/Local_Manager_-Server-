@@ -10,23 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="Интерфейс готов. Добавлена java машина. Осталось сделать логирование и сохранение чата">
-      <change afterPath="$PROJECT_DIR$/../../.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Saves/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Formating/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/ClassWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Interfaces/LogWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Writers/ClassSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Writers/Logger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Resources/MainScreenView.kv" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/MainScreenView.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Resources/Server.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../../Resources/Server.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Formating/MessageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Formating/MessageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaces/BaseServer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MainScreen/MSBinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MainScreen/MSBinder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../MainScreen/MainScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../MainScreen/MainScreen.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

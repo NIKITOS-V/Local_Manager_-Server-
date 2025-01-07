@@ -71,8 +71,6 @@ public class Server implements CCDController, BaseServer {
 
                 startListeningThread();
 
-                sendServerMessageToGUI("Сервер запущен");
-
                 this.logWriter.addLog("The server was running.");
 
                 if (!this.chatHistorySendToGUI) {
@@ -91,7 +89,10 @@ public class Server implements CCDController, BaseServer {
                     }
 
                     this.chatHistorySendToGUI = true;
+
                 }
+
+                sendServerMessageToGUI("Сервер запущен");
             }
         } catch (IOException e){
             this.logWriter.addLog(e.toString());
@@ -173,13 +174,7 @@ public class Server implements CCDController, BaseServer {
 
     @Override
     public boolean stopServer(){
-        try {
-            this.classWriter.saveObject(new Save(this.chatHistory), SAVE_NAME);
-            this.logWriter.addLog("The chat history has been saved");
-
-        } catch (Exception e){
-            this.logWriter.addLog(e.toString());
-        }
+        boolean serverStop = false;
 
         try {
             if (this.serverSocket != null && !this.serverSocket.isClosed()) {
@@ -194,15 +189,23 @@ public class Server implements CCDController, BaseServer {
                 this.logWriter.addLog("the server has been stopped.");
 
                 sendServerMessageToGUI("Сервер остановлен");
+
+                serverStop = true;
             }
 
         } catch (IOException e) {
             this.logWriter.addLog(e.toString());
-
-            return false;
         }
 
-        return true;
+        try {
+            this.classWriter.saveObject(new Save(this.chatHistory), SAVE_NAME);
+            this.logWriter.addLog("The chat history has been saved");
+
+        } catch (Exception e){
+            this.logWriter.addLog(e.toString());
+        }
+
+        return serverStop;
     }
 
     @Override
