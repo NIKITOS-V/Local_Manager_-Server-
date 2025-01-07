@@ -1,6 +1,7 @@
 package ClientConnectDriver;
 
 import Interfaces.FunctionsController;
+import Interfaces.LogWriter;
 import Interfaces.RecipientClientRequests;
 import RequestTypes.ClientRequestType;
 import RequestTypes.ServerRequestType;
@@ -20,16 +21,24 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
     private final String userName;
 
     private final CCDController server;
+    private final LogWriter logWriter;
 
     private final Socket socket;
     private final BufferedWriter bufferedWriter;
     private final BufferedReader bufferedReader;
 
-    public ClientConnectDriver(Integer userID, String userName, Socket socket, CCDController server) throws IOException {
+    public ClientConnectDriver(
+            Integer userID,
+            String userName,
+            Socket socket,
+            CCDController server,
+            LogWriter logWriter
+    ) throws IOException {
         this.functionsController = new FunctionsManager(this);
 
         this.socket = socket;
         this.server = server;
+        this.logWriter = logWriter;
 
         this.bufferedWriter = new BufferedWriter(
                 new OutputStreamWriter(
@@ -73,6 +82,8 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
             this.bufferedWriter.flush();
 
         } catch (IOException e){
+            this.logWriter.addLog(e.toString());
+
             closeConnection();
         }
     }
@@ -80,6 +91,8 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
     @Override
     public void sendToClientChatHistory(){
         server.sendChatHistoryToClient(this);
+
+        this.logWriter.addLog("The chat history has been sent");
     }
 
     @Override
@@ -96,6 +109,14 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
                 this.userID,
                 this.userName,
                 linesFromMessage
+        );
+
+        this.logWriter.addLog(
+                String.format(
+                        "the client %s(%s) sent the message",
+                        this.userName,
+                        this.userID
+                )
         );
     }
 
@@ -127,6 +148,7 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
                 );
 
             } catch (Exception e) {
+                this.logWriter.addLog(e.toString());
                 closeConnection();
             }
         }
@@ -134,23 +156,42 @@ public class ClientConnectDriver implements Runnable, RecipientClientRequests {
 
     @Override
     public void closeConnection(){
-        System.out.println("close con start");
-
         try {
             if (!this.socket.isClosed()){
                 this.server.delClientFromList(this);
 
                 this.socket.close();
+                this.logWriter.addLog(
+                        String.format(
+                                "The socket of %s(%s) was closed.",
+                                this.userName,
+                                this.userID
+                        )
+                );
+
                 this.bufferedWriter.close();
+                this.logWriter.addLog(
+                        String.format(
+                                "The bufferedWriter of %s(%s) was closed.",
+                                this.userName,
+                                this.userID
+                        )
+                );
+
                 this.bufferedReader.close();
+                this.logWriter.addLog(
+                        String.format(
+                                "The bufferedReader of %s(%s) was closed.",
+                                this.userName,
+                                this.userID
+                        )
+                );
             }
 
         } catch (IOException e) {
-            System.out.println("close con fail");
-            e.printStackTrace();
+            this.logWriter.addLog(e.toString());
         }
 
-        System.out.println("close con nice");
     }
 
     @Override

@@ -1,9 +1,10 @@
-import Interfaces.BaseServer;
-import Interfaces.CCDController;
-import Interfaces.RecipientMessages;
+import Formating.Save;
+import Interfaces.*;
 import RequestTypes.ClientRequestType;
 import Formating.MessageData;
 import ClientConnectDriver.ClientConnectDriver;
+import Writers.ClassSaver;
+import Writers.Logger;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,18 +19,48 @@ import java.util.List;
 public class Server implements CCDController, BaseServer {
     private static int LAST_USER_ID = 0;
     private static final String SERVER_NAME = "SERVER";
+    private static final String SAVE_NAME = "chatHistory";
     private static final int SERVER_ID = -1;
 
     private final List<ClientConnectDriver> clientConnectDriverList;
-    private final List<MessageData> messageDataList;
+    private final List<MessageData> chatHistory;
 
     private ServerSocket serverSocket;
 
     private RecipientMessages msBinder;
 
-    public Server(){
+    private final ClassWriter classWriter;
+    private final LogWriter logWriter;
+
+    private boolean chatHistorySendToGUI;
+
+    public Server() throws IOException {
+        this.classWriter = new ClassSaver("Saves");
+        this.logWriter = new Logger("Logs");
+
         this.clientConnectDriverList = new LinkedList<>();
-        this.messageDataList = new LinkedList<>();
+
+        List<MessageData> uploadChatHistory = new LinkedList<>();
+
+        try {
+            uploadChatHistory = ((Save) this.classWriter.openObject(SAVE_NAME)).getChatHistory();
+
+            this.logWriter.addLog("The chat history is uploaded.");
+
+        } catch (Exception e){
+            this.logWriter.addLog(e.toString());
+        }
+
+        this.chatHistory = uploadChatHistory;
+
+        this.logWriter.addLog(
+                String.format(
+                        "The %s class has been launched.",
+                        this.getClass().getSimpleName()
+                )
+        );
+
+        this.chatHistorySendToGUI = false;
     }
 
     @Override
@@ -41,9 +72,30 @@ public class Server implements CCDController, BaseServer {
                 startListeningThread();
 
                 sendServerMessageToGUI("Сервер запущен");
+
+                this.logWriter.addLog("The server was running.");
+
+                if (!this.chatHistorySendToGUI) {
+                    for (MessageData messageData : this.chatHistory) {
+                        StringBuilder message = new StringBuilder();
+
+                        for (String line : messageData.getLinesFromMessage()) {
+                            message.append(line).append("\n");
+                        }
+
+                        this.msBinder.accept_message(
+                                messageData.getUserID(),
+                                messageData.getUserName(),
+                                message.toString()
+                        );
+                    }
+
+                    this.chatHistorySendToGUI = true;
+                }
             }
         } catch (IOException e){
-            e.printStackTrace();
+            this.logWriter.addLog(e.toString());
+
             stopServer();
 
             return false;
@@ -73,6 +125,12 @@ public class Server implements CCDController, BaseServer {
                     if (requestType.equals(String.valueOf(ClientRequestType.connect))){
                         userName = bufferedReader.readLine();
 
+                        this.logWriter.addLog(String.format(
+                                "the user %s has connected.",
+                                userName
+                                )
+                        );
+
                         addClient(userName, socket);
 
                         sendServerMessageToClient(
@@ -84,10 +142,12 @@ public class Server implements CCDController, BaseServer {
                     }
 
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    this.logWriter.addLog(e.toString());
                 }
             }
         }).start();
+
+        this.logWriter.addLog("The message acceptance thread has been started.");
     }
 
     private void addClient(String userName, Socket socket) throws IOException {
@@ -96,19 +156,30 @@ public class Server implements CCDController, BaseServer {
                 LAST_USER_ID++,
                 userName,
                 socket,
-                this
+                this,
+                this.logWriter
         );
 
         new Thread(clientConnectDriver).start();
 
         this.clientConnectDriverList.add(clientConnectDriver);
 
-        System.out.println(this.clientConnectDriverList);
+        this.logWriter.addLog(String.format(
+                "the user %s has been added to the list.",
+                userName
+                )
+        );
     }
 
     @Override
     public boolean stopServer(){
-        System.out.println("stop server");
+        try {
+            this.classWriter.saveObject(new Save(this.chatHistory), SAVE_NAME);
+            this.logWriter.addLog("The chat history has been saved");
+
+        } catch (Exception e){
+            this.logWriter.addLog(e.toString());
+        }
 
         try {
             if (this.serverSocket != null && !this.serverSocket.isClosed()) {
@@ -117,14 +188,16 @@ public class Server implements CCDController, BaseServer {
                 }
 
                 this.clientConnectDriverList.clear();
+                this.logWriter.addLog("the list of users has been cleared.");
 
-                serverSocket.close();
+                this.serverSocket.close();
+                this.logWriter.addLog("the server has been stopped.");
 
                 sendServerMessageToGUI("Сервер остановлен");
             }
 
         } catch (IOException e) {
-            e.printStackTrace();
+            this.logWriter.addLog(e.toString());
 
             return false;
         }
@@ -135,12 +208,23 @@ public class Server implements CCDController, BaseServer {
     @Override
     public void setMSBinder(RecipientMessages msBinder) {
         this.msBinder = msBinder;
+
+        this.logWriter.addLog("The binding class has been accepted");
+    }
+
+    @Override
+    public void clearChat() {
+        this.chatHistory.clear();
+
+        this.logWriter.addLog("chat history cleared");
     }
 
     @Override
     public void delClientFromList(ClientConnectDriver clientConnectDriver) {
         synchronized (this.clientConnectDriverList){
             this.clientConnectDriverList.remove(clientConnectDriver);
+
+            this.logWriter.addLog("The user has been removed from the list");
 
             sendServerMessageToClient(
                 String.format(
@@ -149,14 +233,12 @@ public class Server implements CCDController, BaseServer {
                 )
             );
         }
-
-        System.out.println(this.clientConnectDriverList);
     }
 
     @Override
     public void sendMessageToClients(int userID, String userName, List<String> linesFromMessage) {
-        synchronized (this.messageDataList){
-            this.messageDataList.add(
+        synchronized (this.chatHistory){
+            this.chatHistory.add(
                 new MessageData(userID, userName, linesFromMessage)
             );
 
@@ -181,6 +263,14 @@ public class Server implements CCDController, BaseServer {
     }
 
     private void sendServerMessageToGUI(String message){
+        this.chatHistory.add(
+                new MessageData(
+                        SERVER_ID,
+                        SERVER_NAME,
+                        Collections.singletonList(message)
+                )
+        );
+
         this.msBinder.accept_message(
                 SERVER_ID,
                 SERVER_NAME,
@@ -199,8 +289,8 @@ public class Server implements CCDController, BaseServer {
 
     @Override
     public void sendChatHistoryToClient(ClientConnectDriver clientConnectDriver) {
-        synchronized (this.messageDataList){
-            for (MessageData messageData: this.messageDataList){
+        synchronized (this.chatHistory){
+            for (MessageData messageData: this.chatHistory){
                 clientConnectDriver.sendMessageToClient(
                         messageData.getUserName(), messageData.getLinesFromMessage()
                 );

@@ -36,6 +36,9 @@ class MessagesPanel(TextInput):
     def add_text(self, user_id: int, user_name: java.lang.String, message: java.lang.String) -> None:
         self.text += f"{user_name}({user_id}): {message}\n"
 
+    def clear_panel(self) -> None:
+        self.text = ""
+
 
 @implementer(RecipientMessages)
 class MainScreen(Screen):
@@ -98,6 +101,11 @@ class MainScreen(Screen):
                 "Ошибка",
                 "Не удалось"
             )
+
+    def clear_chat(self) -> None:
+        self.ids.messages_panel.clear_panel()
+
+        self.__msBinder.clear_chat()
 
     @mainthread
     def accept_messages(self, user_id: int, user_name: java.lang.String, message: java.lang.String) -> None:

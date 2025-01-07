@@ -1,8 +1,9 @@
 package Formating;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class MessageData {
+public class MessageData implements Serializable {
     private final Integer userID;
     private final String userName;
     private final List<String> linesFromMessage;
