@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="369d7e19-66b1-4793-822a-385a15b49ede" name="Changes" comment="Исправлен баг с сохранением чата. Осталось написать Readme файл">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/LMServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/LMServer/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="369d7e19-66b1-4793-822a-385a15b49ede" name="Changes" comment="Добавил README.md">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -144,7 +142,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736267141505</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Переименовал корневую директорию java части с src на java">
+      <option name="closed" value="true" />
+      <created>1736325296030</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1736325296030</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Добавил README.md">
+      <option name="closed" value="true" />
+      <created>1736325316891</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1736325316891</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -153,6 +167,8 @@
     <MESSAGE value="Добавил папки для логов и исполняемого файла" />
     <MESSAGE value="Готов логгер и готово сохранение чата" />
     <MESSAGE value="Исправлен баг с сохранением чата. Осталось написать Readme файл" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен баг с сохранением чата. Осталось написать Readme файл" />
+    <MESSAGE value="Переименовал корневую директорию java части с src на java" />
+    <MESSAGE value="Добавил README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавил README.md" />
   </component>
 </project>
