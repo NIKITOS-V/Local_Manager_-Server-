@@ -10,7 +10,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="Интерфейс готов. Добавлена java машина. Осталось сделать логирование и сохранение чата">
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/ClientConnectDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/CloseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/CloseConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/Function.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/SendMessageToClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/SendMessageToClients.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/SendToClientChatHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/SendToClientChatHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/FunctionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/FunctionsManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formating/MessageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Formating/MessageData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Formating/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Formating/Save.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/BaseServer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/CCDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/CCDController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/ClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/ClassWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/Executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/Executable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/FunctionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/FunctionsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/LogWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/LogWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/RecipientClientRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/RecipientClientRequests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Interfaces/RecipientMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/RecipientMessages.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RequestTypes/ClientRequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/RequestTypes/ClientRequestType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RequestTypes/ServerRequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/RequestTypes/ServerRequestType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Server.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Writers/ClassSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Writers/ClassSaver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Writers/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Writers/Logger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +135,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/ClientConnectDriver/FunctionsManager.java</url>
+          <url>file://$PROJECT_DIR$/java/ClientConnectDriver/FunctionsManager.java</url>
           <line>41</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
