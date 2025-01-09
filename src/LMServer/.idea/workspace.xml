@@ -9,32 +9,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="Интерфейс готов. Добавлена java машина. Осталось сделать логирование и сохранение чата">
-      <change afterPath="$PROJECT_DIR$/../../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="c90280da-cc01-491a-a65c-da27e6bfecf8" name="Changes" comment="обновил pom.xml">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/ClientConnectDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/ClientConnectDriver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/CloseConnection.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/CloseConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/Function.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/Function.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/SendMessageToClients.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/SendMessageToClients.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/Functions/SendToClientChatHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/Functions/SendToClientChatHistory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ClientConnectDriver/FunctionsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/ClientConnectDriver/FunctionsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Formating/MessageData.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Formating/MessageData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Formating/Save.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Formating/Save.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/BaseServer.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/BaseServer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/CCDController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/CCDController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/ClassWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/ClassWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/Executable.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/Executable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/FunctionsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/FunctionsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/LogWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/LogWriter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/RecipientClientRequests.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/RecipientClientRequests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaces/RecipientMessages.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Interfaces/RecipientMessages.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RequestTypes/ClientRequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/RequestTypes/ClientRequestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/RequestTypes/ServerRequestType.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/RequestTypes/ServerRequestType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Server.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Writers/ClassSaver.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Writers/ClassSaver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Writers/Logger.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/Writers/Logger.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,14 +98,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736258015114</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="обновил pom.xml">
+      <option name="closed" value="true" />
+      <created>1736331502281</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1736331502281</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Относительно готово, на данный момент работает. Остался визуал и логирование." />
     <MESSAGE value="Начало работы над визуалом" />
     <MESSAGE value="Интерфейс готов. Добавлена java машина. Осталось сделать логирование и сохранение чата" />
-    <option name="LAST_COMMIT_MESSAGE" value="Интерфейс готов. Добавлена java машина. Осталось сделать логирование и сохранение чата" />
+    <MESSAGE value="обновил pom.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновил pom.xml" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
