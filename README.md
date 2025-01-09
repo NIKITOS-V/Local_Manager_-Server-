@@ -1,4 +1,4 @@
-<h1 align="center">Local messenger (Client)</h1> 
+<h1 align="center">Local messenger (Server)</h1> 
 
 * **
 
