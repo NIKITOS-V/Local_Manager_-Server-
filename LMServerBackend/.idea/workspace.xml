@@ -10,87 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e3b9974a-91e1-4328-9600-030b77094676" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../GUI/Interfaces/Binders.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../GUI/Widgets/Buttons.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/LMServerBackend_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_blame.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/ClientConnectDriver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/Functions/CloseConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/Functions/Function.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/Functions/SendMessageToClients.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/Functions/SendToClientChatHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/ClientConnectDriver/FunctionsManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/Formating/MessageData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/Formating/Save.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/BaseServer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/CCDController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/ClassWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/Executable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/FunctionsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/LogWriter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/JavaInterfaces/RecipientClientRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/PyInterfaces/RecipientMessages.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/RequestTypes/ClientRequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/RequestTypes/ServerRequestType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/Server.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/Writers/ClassSaver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/NIKITOS_V/Writers/Logger.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Resources/KV/BackgroundView.kv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Resources/LMServerBackend.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitattributes" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Resources/MainScreenView.kv" beforeDir="false" afterPath="$PROJECT_DIR$/../Resources/KV/MainScreenView.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Resources/Server.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/ARLayout.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Widgets/Layouts.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Formating/Errors.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Formating/Errors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Formating/Objectless.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Formating/Objectless.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Formating/Palette.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Formating/Palette.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/Interfaces/RecipientMessages.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Interfaces/RecipientMessages.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/artifacts/Server.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/git_toolbox_blame.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/git_toolbox_prj.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/ClientConnectDriver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/Functions/CloseConnection.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/Functions/Function.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/Functions/SendMessageToClients.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/Functions/SendToClientChatHistory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/ClientConnectDriver/FunctionsManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Formating/MessageData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Formating/Save.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/BaseServer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/CCDController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/ClassWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/Executable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/FunctionsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/LogWriter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/RecipientClientRequests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Interfaces/RecipientMessages.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/RequestTypes/ClientRequestType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/RequestTypes/ServerRequestType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Server.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Writers/ClassSaver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/java/Writers/Logger.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/LMServer/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MainScreen/CommonSettings.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Formating/Colors.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MainScreen/MSBinder.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/Binder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/MainScreen/MainScreen.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/MainScreen/MainScreen.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/ScreenController.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/ScreenController.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/ServerWindow.py" beforeDir="false" afterPath="$PROJECT_DIR$/../GUI/ServerWindow.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,9 +20,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2rtI05aTOfJXugjbttxMJaANxA6" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -111,18 +31,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Programs/Python_java/Local_Messenger/LMServer/Resources",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Programs/Python_java/Local_Messenger/LMServer/Resources&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Programs\Python_java\Local_Messenger\LMServer\LMServerBackend\src\main\java\ru\NIKITOS_V" />
